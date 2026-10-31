@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WeatherWise provides real-time weather updates and forecasts around the world.">
+    <title>WeatherWise | Weather Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+
+    <header class="topbar">
+        <a href="#" class="brand">
+            <span class="brand-mark">W</span>
+            <span>WeatherWise</span>
+        </a>
+        <span class="topbar-label">WEATHER INTELLIGENCE</span>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <p class="eyebrow">WEATHER OVERVIEW</p>
+            <h1>Weather at a glance.</h1>
+            <p class="welcome-text">
+                Real-time conditions and forecasts, wherever you are.
+            </p>
+        </section>
+
+        <section class="search-panel">
+            <form id="weather-form">
+                <span class="search-icon">⌕</span>
+                <input type="text" id="city-input"
+                    placeholder="Search city or location..."
+                    autocomplete="off" required>
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </section>
+
+        <p id="message" class="message" role="status">
+            Search for a city to view its latest weather conditions.
+        </p>
+
+        <section id="dashboard" class="dashboard hidden">
+
+            <section class="current-weather">
+                <div class="current-left">
+                    <p class="section-tag">CURRENT CONDITIONS</p>
+                    <h2 id="city-name">Chennai</h2>
+                    <p id="country-name">India</p>
+
+                    <div class="temperature-row">
+                        <span id="weather-icon" aria-hidden="true"></span>
+                        <h3 id="temperature">--°C</h3>
+                    </div>
+
+                    <p id="description" class="description">Weather condition</p>
+                    <p id="local-time" class="local-time">Local time</p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-tag">AT A GLANCE</p>
+                        <h2>Weather Highlights</h2>
+                    </div>
+                    <p class="section-subtitle">
+                        Current readings and daily maximum UV index
+                    </p>
+                </div>
+
+                <div class="metrics-grid">
+                    <article class="metric-card">
+                        <span class="metric-icon">◉</span>
+                        <p>Feels Like</p>
+                        <strong id="feels-like">--°C</strong>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon">◌</span>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon">↗</span>
+                        <p>Wind Speed</p>
+                        <strong id="wind-speed">-- km/h</strong>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon">➤</span>
+                        <p>Wind Direction</p>
+                        <strong id="wind-direction">--</strong>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon">☼</span>
+                        <p>Daily Maximum UV</p>
+                        <strong id="uv-index">--</strong>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon">⌁</span>
+                        <p>Precipitation</p>
+                        <strong id="precipitation">-- mm</strong>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-tag">UPCOMING CONDITIONS</p>
+                        <h2>Hourly Forecast</h2>
+                    </div>
+                    <p class="section-subtitle">
+                        Temperature and precipitation probability
+                    </p>
+                </div>
+
+                <div id="hourly-forecast" class="hourly-grid"></div>
+            </section>
+
+            <section class="section-block">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-tag">EXTENDED OUTLOOK</p>
+                        <h2>7-Day Forecast</h2>
+                    </div>
+                    <p class="section-subtitle">
+                        Daily high, low and sunrise/sunset
+                    </p>
+                </div>
+
+                <div class="daily-list">
+                    <div class="daily-header">
+                        <span>DAY</span>
+                        <span>CONDITION</span>
+                        <span>HIGH / LOW</span>
+                        <span>SUNRISE / SUNSET</span>
+                    </div>
+                    <div id="daily-forecast"></div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="footer-brand">WeatherWise</a>
+        <p>Built with HTML, CSS and JavaScript</p>
+        <p>Weather data provided by Open-Meteo</p>
+        <p class="footer-note">Thiranex Internship · Task 4</p>
+    </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
